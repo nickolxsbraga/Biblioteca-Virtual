@@ -12,7 +12,6 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
         http
-            // 🔴 ISSO RESOLVE O 400 DO POSTMAN
             .csrf(csrf -> csrf.disable())
 
             .authorizeHttpRequests(auth -> auth

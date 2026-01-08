@@ -19,14 +19,8 @@ public class Transacao {
 
     @ManyToOne
     private Leitor leitor;
-
     private LocalDate dataReserva;
-
-    private String status; // RESERVADO / DEVOLVIDO
-
-    // ======================
-    // Getters e Setters
-    // ======================
+    private String status; 
 
     public Long getId() {
         return id;

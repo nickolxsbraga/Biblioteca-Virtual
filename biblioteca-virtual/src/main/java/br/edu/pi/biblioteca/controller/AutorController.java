@@ -4,7 +4,6 @@ import br.edu.pi.biblioteca.model.Autor;
 import br.edu.pi.biblioteca.repository.AutorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController

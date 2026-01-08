@@ -9,22 +9,17 @@ public class Livro {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String titulo;
-
     private String categoria;
-
+    
     @Column(name = "ano_publicacao")
     private Integer anoPublicacao;
-
     private Boolean disponivel;
-
-    // 🔴 IMPORTANTE: autor NÃO pode bloquear o POST
+    
     @ManyToOne
     @JoinColumn(name = "autor_id", nullable = true)
     private Autor autor;
 
-    // getters e setters OBRIGATÓRIOS
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
