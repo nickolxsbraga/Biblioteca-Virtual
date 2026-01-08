@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Catálogo de Livros</title>
+
+    <!-- CSS CORRETO -->
+    <link rel="stylesheet" th:href="@{style.css}">
+</head>
+<body>
+
+<div class="container">
+    <h2>Catálogo de Livros</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Título</th>
+                <th>Categoria</th>
+                <th>Ano</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="livro : ${livros}">
+                <td th:text="${livro.id}"></td>
+                <td th:text="${livro.titulo}"></td>
+                <td th:text="${livro.categoria}"></td>
+                <td th:text="${livro.anoPublicacao}"></td>
+                <td th:text="${livro.disponivel ? 'Disponível' : 'Reservado'}"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
